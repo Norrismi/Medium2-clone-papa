@@ -3,18 +3,36 @@ export interface Post {
     _createdAt: string;
     title: string;
     author: {
-        name: string;
-        image: string;
+      name: string;
+      image: string;
     };
+    comments: Comment[];
     description: string;
     mainImage: {
-        asset: {
-            url: string;
-        };
-
+      asset: {
+        url: string;
+      };
     };
     slug: {
-        current: string;
+      current: string;
     };
     body: [object];
-}
+  }
+  
+  export interface Comment {
+    approved: boolean;
+    comment: string;
+    email: string;
+    name: string;
+    post: {
+      _ref: string;
+      _type: string;
+    };
+    _created: string;
+    _id: string;
+    _rev: string;
+    _type: string;
+    _updated: string;
+  }
+
+  
