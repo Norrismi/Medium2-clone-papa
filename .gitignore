@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+
+papamedium2/node_modules
+
 # testing
 /coverage
 
